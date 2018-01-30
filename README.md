@@ -27,3 +27,4 @@ qc_excited.measure(qr[0], cr[0])
 circuits = ['ground', 'excited']
 
 Q_program.get_qasms(circuits)
+result = Q_program.execute(circuits, backend=backend, shots=shots, max_credits=3, wait=10, timeout=240, silent=False)
