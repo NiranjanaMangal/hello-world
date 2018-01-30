@@ -28,3 +28,4 @@ circuits = ['ground', 'excited']
 
 Q_program.get_qasms(circuits)
 result = Q_program.execute(circuits, backend=backend, shots=shots, max_credits=3, wait=10, timeout=240, silent=False)
+plot_histogram(result.get_counts('ground'))
